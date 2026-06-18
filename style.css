@@ -1162,8 +1162,6 @@ body {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
-<<<<<<< HEAD
-=======
 
 /* ── CERT CATEGORIES (Redesigned) ────────────────────────── */
 .cert-category-card {
@@ -1345,10 +1343,10 @@ body {
 
 .skill-pro-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.45rem 0.6rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  padding: 0.6rem;
   border-radius: 8px;
   transition: background var(--transition);
 }
@@ -1356,11 +1354,23 @@ body {
   background: rgba(255,255,255,0.03);
 }
 
+.skill-pro-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .skill-pro-name {
   font-size: 0.84rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-secondary);
-  flex: 1;
+}
+
+/* Adjust skill-bar-track height and margins specifically for skills-pro cards */
+.skill-pro-card .skill-bar-track {
+  height: 4px;
+  margin-top: 2px;
 }
 
 /* Proficiency Badges */
@@ -1397,4 +1407,3 @@ body {
   .skills-pro-grid { grid-template-columns: 1fr; }
 }
 
->>>>>>> ac72d1e (Redesign Skills section with professional AI Engineer layout and glassmorphism)
