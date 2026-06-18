@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Jonathan David – AI & Data Science undergraduate skilled in Machine Learning, FastAPI, Django, LLM applications and intelligent systems." />
+  <meta name="keywords" content="Jonathan David, AI, Data Science, Machine Learning, Python, FastAPI, Portfolio" />
+  <meta name="author" content="Jonathan David" />
+  <meta property="og:title" content="Jonathan David | AI & Data Science Portfolio" />
+  <meta property="og:description"
+    content="Portfolio of Jonathan David – AI & Data Science undergraduate passionate about ML, cybersecurity and intelligent systems." />
+  <meta property="og:type" content="website" />
+  <title>Jonathan David | AI & Data Science Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-label="Loading">
+    <div class="loader-inner">
+      <div class="loader-logo">JD</div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+      </div>
+      <p class="loader-text" id="loaderText">Initializing AI Systems...</p>
+    </div>
+  </div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="navLogo" aria-label="Jonathan David">
+        <span class="logo-bracket">&lt;</span>JD<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link" id="navAbout">About</a></li>
+        <li><a href="#skills" class="nav-link" id="navSkills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="navProjects">Projects</a></li>
+        <li><a href="#education" class="nav-link" id="navEducation">Education</a></li>
+        <li><a href="#certifications" class="nav-link" id="navCerts">Certs</a></li>
+        <li><a href="#achievements" class="nav-link" id="navAchievements">Achievements</a></li>
+        <li><a href="#extracurricular" class="nav-link" id="navExtra">Activities</a></li>
+        <li><a href="#contact" class="nav-link nav-cta" id="navContact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="heroHeading">
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge" id="heroBadge">
+          <span class="badge-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+        <h1 class="hero-name" id="heroHeading">Jonathan<br /><span class="gradient-text">David</span></h1>
+        <div class="hero-typing-wrapper">
+          <span class="typing-prefix">I build &nbsp;</span>
+          <span class="typing-text" id="typingText" aria-live="polite"></span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero-desc">
+          AI &amp; Data Science undergraduate passionate about Machine Learning, cybersecurity, automation and
+          intelligent systems. Building the future one model at a time.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="heroCTA">View Projects</a>
+          <a href="#contact" class="btn btn-ghost" id="heroContact">Get In Touch</a>
+        </div>
+        <div class="hero-stats" aria-label="Quick stats">
+          <div class="stat" id="stat1">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" id="stat2">
+            <span class="stat-number">92%</span>
+            <span class="stat-label">Best Accuracy</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" id="stat3">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ai-orb">
+          <div class="orb-ring orb-ring-1"></div>
+          <div class="orb-ring orb-ring-2"></div>
+          <div class="orb-ring orb-ring-3"></div>
+          <div class="orb-core">
+            <svg viewBox="0 0 100 100" class="orb-svg">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="url(#orbGrad)" stroke-width="1.5"
+                stroke-dasharray="4 3" />
+              <circle cx="50" cy="50" r="25" fill="none" stroke="url(#orbGrad2)" stroke-width="1" />
+              <circle cx="50" cy="50" r="8" fill="url(#orbGrad)" />
+              <defs>
+                <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c3aed" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+                <linearGradient id="orbGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#06b6d4" />
+                  <stop offset="100%" stop-color="#7c3aed" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="orb-labels">
+            <span class="orb-label" style="--angle:0deg">ML</span>
+            <span class="orb-label" style="--angle:60deg">AI</span>
+            <span class="orb-label" style="--angle:120deg">NLP</span>
+            <span class="orb-label" style="--angle:180deg">CV</span>
+            <span class="orb-label" style="--angle:240deg">API</span>
+            <span class="orb-label" style="--angle:300deg">SEC</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-label="Scroll down">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title" id="aboutHeading">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="about-para">
+              I'm <strong>Jonathan David</strong>, a B.Tech Computer Engineering student specializing in
+              <strong>Artificial Intelligence and Data Science</strong> at Karunya Institute of Technology and Sciences,
+              India.
+            </p>
+            <p class="about-para">
+              My passion lies in building intelligent systems that solve real-world problems — from <strong>malware
+                detection</strong> using hybrid ML approaches to <strong>financial fraud prediction</strong> with deep
+              learning. I bridge the gap between cutting-edge AI research and practical engineering.
+            </p>
+            <p class="about-para">
+              Beyond code, I'm a <strong>professional drummer</strong> performing with the Manga Belts Band and Church
+              Music Ministry, an avid badminton player, and a track athlete — proving that creativity and discipline go
+              hand in hand.
+            </p>
+            <div class="about-tags">
+              <span class="tag">🤖 ML Engineer</span>
+              <span class="tag">🔐 Cybersecurity</span>
+              <span class="tag">🎵 Drummer</span>
+              <span class="tag">🏸 Athlete</span>
+              <span class="tag">🇮🇳 India</span>
+            </div>
+          </div>
+          <div class="about-cards reveal">
+            <div class="info-card" id="infoCard1">
+              <div class="info-card-icon">🎓</div>
+              <div>
+                <h3>Education</h3>
+                <p>B.Tech Computer Engineering (AI &amp; DS)</p>
+                <small>Karunya Institute of Technology and Sciences</small>
+              </div>
+            </div>
+            <div class="info-card" id="infoCard2">
+              <div class="info-card-icon">📍</div>
+              <div>
+                <h3>Location</h3>
+                <p>India</p>
+                <small>Open to Remote Opportunities</small>
+              </div>
+            </div>
+            <div class="info-card" id="infoCard3">
+              <div class="info-card-icon">🧠</div>
+              <div>
+                <h3>Focus Area</h3>
+                <p>AI, ML &amp; Cybersecurity</p>
+                <small>LLM Applications &amp; Automation</small>
+              </div>
+            </div>
+            <div class="info-card" id="infoCard4">
+              <div class="info-card-icon">🚀</div>
+              <div>
+                <h3>Stack</h3>
+                <p>Python · FastAPI · Django</p>
+                <small>OpenAI · Claude · Gemini</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills" aria-labelledby="skillsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title" id="skillsHeading">My <span class="gradient-text">Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category reveal" id="skillProg">
+            <h3 class="skill-cat-title"><span class="skill-cat-icon">💻</span> Programming</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Python</span><span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="95"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>JavaScript</span><span class="skill-pct">78%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="78"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>HTML &amp; CSS</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>SQL</span><span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="skillAI">
+            <h3 class="skill-cat-title"><span class="skill-cat-icon">🤖</span> Artificial Intelligence</h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Machine Learning</span><span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Deep Learning</span><span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="82"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>NLP &amp; LLMs</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span>Prompt Engineering</span><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="88"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="skillFramework">
+            <h3 class="skill-cat-title"><span class="skill-cat-icon">⚙️</span> Frameworks</h3>
+            <div class="skill-pills">
+              <span class="pill pill-primary">FastAPI</span>
+              <span class="pill pill-primary">Django</span>
+              <span class="pill pill-primary">Streamlit</span>
+              <span class="pill pill-secondary">REST APIs</span>
+              <span class="pill pill-secondary">OpenAI SDK</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" id="skillTools">
+            <h3 class="skill-cat-title"><span class="skill-cat-icon">🛠️</span> Tools &amp; Platforms</h3>
+            <div class="skill-pills">
+              <span class="pill pill-primary">OpenAI</span>
+              <span class="pill pill-primary">Claude</span>
+              <span class="pill pill-primary">Gemini</span>
+              <span class="pill pill-secondary">GitHub Copilot</span>
+              <span class="pill pill-secondary">Git</span>
+              <span class="pill pill-secondary">Power BI</span>
+              <span class="pill pill-secondary">Chart.js</span>
+              <span class="pill pill-secondary">Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects" aria-labelledby="projectsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title" id="projectsHeading">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" id="project1" aria-labelledby="proj1Title">
+            <div class="project-card-glow" aria-hidden="true"></div>
+            <div class="project-number" aria-hidden="true">01</div>
+            <div class="project-header">
+              <div class="project-icon">🛡️</div>
+              <div class="project-badges">
+                <span class="project-badge badge-red">Security</span>
+                <span class="project-badge badge-purple">ML</span>
+              </div>
+            </div>
+            <h3 class="project-title" id="proj1Title">Hybrid Multi-Modal Malware Detection System</h3>
+            <p class="project-desc">
+              A comprehensive malware detection system for executables, images, videos, documents and audio. Combines
+              YARA Rules, ML Classification, Entropy Analysis, Steganography Detection and Explainable AI with a
+              real-time analytics dashboard.
+            </p>
+            <ul class="project-features" aria-label="Features">
+              <li>YARA Rules &amp; Entropy Analysis</li>
+              <li>Multi-modal file scanning</li>
+              <li>Explainable AI (XAI)</li>
+              <li>Steganography Detection</li>
+              <li>Interactive Dashboard</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">ML</span>
+              <span class="tech-chip">YARA</span>
+              <span class="tech-chip">Chart.js</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="project2" aria-labelledby="proj2Title">
+            <div class="project-card-glow" aria-hidden="true"></div>
+            <div class="project-number" aria-hidden="true">02</div>
+            <div class="project-header">
+              <div class="project-icon">💰</div>
+              <div class="project-badges">
+                <span class="project-badge badge-green">FinTech</span>
+                <span class="project-badge badge-blue">92% Accuracy</span>
+              </div>
+            </div>
+            <h3 class="project-title" id="proj2Title">Financial Fraud Detection System</h3>
+            <p class="project-desc">
+              An intelligent fraud detection platform achieving <strong>92% accuracy</strong>. Features real-time fraud
+              prediction, risk classification, and an interactive data analysis dashboard to help financial institutions
+              prevent fraudulent transactions.
+            </p>
+            <ul class="project-features" aria-label="Features">
+              <li>92% Detection Accuracy</li>
+              <li>Real-time Fraud Prediction</li>
+              <li>Risk Classification Engine</li>
+              <li>Data Analysis Dashboard</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Django</span>
+              <span class="tech-chip">ML</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="project3" aria-labelledby="proj3Title">
+            <div class="project-card-glow" aria-hidden="true"></div>
+            <div class="project-number" aria-hidden="true">03</div>
+            <div class="project-header">
+              <div class="project-icon">🌿</div>
+              <div class="project-badges">
+                <span class="project-badge badge-teal">Environmental</span>
+                <span class="project-badge badge-purple">Forecasting</span>
+              </div>
+            </div>
+            <h3 class="project-title" id="proj3Title">Air Pollution Prediction System</h3>
+            <p class="project-desc">
+              Environmental analytics platform that forecasts air quality using advanced ML models. Includes robust data
+              cleaning pipelines, multi-variate prediction models, and environmental impact analytics.
+            </p>
+            <ul class="project-features" aria-label="Features">
+              <li>Air Quality Forecasting</li>
+              <li>Advanced Data Cleaning</li>
+              <li>Multi-model Prediction</li>
+              <li>Environmental Analytics</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Machine Learning</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education" aria-labelledby="educationHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My Background</span>
+          <h2 class="section-title" id="educationHeading">Education &amp; <span class="gradient-text">Learning</span>
+          </h2>
+        </div>
+        <div class="timeline reveal" id="educationTimeline">
+          <div class="timeline-item" id="eduItem1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-icon">🎓</div>
+              <div class="timeline-content">
+                <span class="timeline-tag">Current</span>
+                <h3>B.Tech Computer Engineering</h3>
+                <h4>Artificial Intelligence and Data Science</h4>
+                <p class="timeline-institution">Karunya Institute of Technology and Sciences</p>
+                <p class="timeline-location">📍 India</p>
+                <ul class="timeline-highlights">
+                  <li>Specialization in AI &amp; Data Science</li>
+                  <li>Focus on ML, Deep Learning &amp; NLP</li>
+                  <li>Built production-ready AI applications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications" aria-labelledby="certsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title" id="certsHeading">Certifications &amp; <span
+              class="gradient-text">Recognition</span></h2>
+        </div>
+        <div class="certs-grid">
+          <div class="cert-card reveal" id="cert1">
+            <div class="cert-glow" aria-hidden="true"></div>
+            <div class="cert-logo oracle-logo">
+              <svg viewBox="0 0 60 30" aria-hidden="true"><text x="2" y="22" font-size="14" font-weight="bold"
+                  fill="url(#oracleGrad)">OCI</text>
+                <defs>
+                  <linearGradient id="oracleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f80000" />
+                    <stop offset="100%" stop-color="#ff6b6b" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Oracle</span>
+              <h3 class="cert-name">Cloud Infrastructure AI Foundations Associate</h3>
+              <span class="cert-type">☁️ Cloud &amp; AI</span>
+            </div>
+          </div>
+
+          <div class="cert-card reveal" id="cert2">
+            <div class="cert-glow" aria-hidden="true"></div>
+            <div class="cert-logo azure-logo">
+              <svg viewBox="0 0 60 30" aria-hidden="true"><text x="2" y="22" font-size="14" font-weight="bold"
+                  fill="url(#azureGrad)">AZ</text>
+                <defs>
+                  <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0078d4" />
+                    <stop offset="100%" stop-color="#50e6ff" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Microsoft</span>
+              <h3 class="cert-name">Azure AI Fundamentals</h3>
+              <span class="cert-type">🤖 AI &amp; Cloud</span>
+            </div>
+          </div>
+
+          <div class="cert-card reveal" id="cert3">
+            <div class="cert-glow" aria-hidden="true"></div>
+            <div class="cert-logo ds-logo">
+              <svg viewBox="0 0 60 30" aria-hidden="true"><text x="2" y="22" font-size="14" font-weight="bold"
+                  fill="url(#dsGrad)">DS</text>
+                <defs>
+                  <linearGradient id="dsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7c3aed" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Industry Internship</span>
+              <h3 class="cert-name">Data Science &amp; Analytics Internship Certificate</h3>
+              <span class="cert-type">📊 Data Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section section-alt" id="achievements" aria-labelledby="achievementsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I've Accomplished</span>
+          <h2 class="section-title" id="achievementsHeading">Key <span class="gradient-text">Achievements</span></h2>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card reveal" id="ach1">
+            <div class="achievement-icon">🛡️</div>
+            <h3>Hybrid Malware Detection System</h3>
+            <p>Built a production-ready multi-modal malware detection system combining YARA rules, ML classification,
+              entropy analysis, and steganography detection with explainable AI.</p>
+          </div>
+          <div class="achievement-card reveal" id="ach2">
+            <div class="achievement-icon">💯</div>
+            <h3>92% Fraud Detection Accuracy</h3>
+            <p>Developed a financial fraud detection system achieving 92% accuracy, demonstrating expertise in data
+              preprocessing, feature engineering, and ML model optimization.</p>
+          </div>
+          <div class="achievement-card reveal" id="ach3">
+            <div class="achievement-icon">⚡</div>
+            <h3>FastAPI &amp; Django AI Applications</h3>
+            <p>Engineered high-performance AI-powered applications using FastAPI and Django, integrating REST APIs for
+              real-time inference and analytics dashboards.</p>
+          </div>
+          <div class="achievement-card reveal" id="ach4">
+            <div class="achievement-icon">🤖</div>
+            <h3>Multi-LLM Expertise</h3>
+            <p>Hands-on experience building applications with OpenAI, Claude, and Gemini APIs along with GitHub Copilot
+              integration for accelerated development workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section class="section" id="extracurricular" aria-labelledby="extraHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Beyond The Code</span>
+          <h2 class="section-title" id="extraHeading">Extra<span class="gradient-text">curricular</span></h2>
+        </div>
+        <div class="extra-grid">
+          <div class="extra-card reveal" id="extraMusic">
+            <div class="extra-card-header">
+              <div class="extra-icon">🥁</div>
+              <h3>Music</h3>
+            </div>
+            <ul class="extra-list">
+              <li>
+                <span class="extra-bullet">♪</span>
+                <div>
+                  <strong>Professional Drummer</strong>
+                  <p>Years of percussive performance across genres</p>
+                </div>
+              </li>
+              <li>
+                <span class="extra-bullet">🎸</span>
+                <div>
+                  <strong>Manga Belts Band</strong>
+                  <p>Active band member and performer</p>
+                </div>
+              </li>
+              <li>
+                <span class="extra-bullet">⛪</span>
+                <div>
+                  <strong>Church Music Ministry</strong>
+                  <p>Dedicated worship team drummer</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="extra-card reveal" id="extraSports">
+            <div class="extra-card-header">
+              <div class="extra-icon">🏅</div>
+              <h3>Sports</h3>
+            </div>
+            <ul class="extra-list">
+              <li>
+                <span class="extra-bullet">🏸</span>
+                <div>
+                  <strong>Badminton</strong>
+                  <p>Competitive court play and training</p>
+                </div>
+              </li>
+              <li>
+                <span class="extra-bullet">🏏</span>
+                <div>
+                  <strong>Cricket</strong>
+                  <p>Team sport and strategic gameplay</p>
+                </div>
+              </li>
+              <li>
+                <span class="extra-bullet">🏃</span>
+                <div>
+                  <strong>Track Events</strong>
+                  <p>Sprint and field event participation</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title" id="contactHeading">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Open to collaborations, internships, and exciting AI projects.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="mailto:jd20040319@gmail.com" class="contact-item" id="contactEmail" aria-label="Email Jonathan">
+              <div class="contact-item-icon">✉️</div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">jd20040319@gmail.com</span>
+              </div>
+              <div class="contact-arrow">→</div>
+            </a>
+            <a href="tel:+91XXXXXXXXXX" class="contact-item" id="contactPhone" aria-label="Call Jonathan">
+              <div class="contact-item-icon">📱</div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+91 9959726166</span>
+              </div>
+              <div class="contact-arrow">→</div>
+            </a>
+            <a href="http://www.linkedin.com/in/jonathan-david-534a07249" target="_blank" rel="noopener noreferrer"
+              class="contact-item" id="contactLinkedIn" aria-label="LinkedIn profile">
+              <div class="contact-item-icon">💼</div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">http://www.linkedin.com/in/jonathan-david-534a07249</span>
+              </div>
+              <div class="contact-arrow">→</div>
+            </a>
+            <a href="https://github.com/jonathandavid-dev" target="_blank" rel="noopener noreferrer" class="contact-item"
+              id="contactGitHub" aria-label="GitHub profile">
+              <div class="contact-item-icon">🐙</div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">https://github.com/jonathandavid-dev</span>
+              </div>
+              <div class="contact-arrow">→</div>
+            </a>
+          </div>
+          <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="formName">Full Name</label>
+              <input type="text" id="formName" name="name" placeholder="Your Name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Email Address</label>
+              <input type="email" id="formEmail" name="email" placeholder="your@email.com" autocomplete="email"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="formSubject">Subject</label>
+              <input type="text" id="formSubject" name="subject" placeholder="Project Collaboration / Internship"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="formMessage">Message</label>
+              <textarea id="formMessage" name="message" rows="4"
+                placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="formSubmit">Send Message 🚀</button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="Back to top">&lt;JD/&gt;</a>
+          <p>Jonathan David · AI &amp; Data Science Engineer</p>
+          <p>Karunya Institute of Technology and Sciences, India</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> Jonathan David. Crafted with 💜 &amp; AI</p>
+        <div class="footer-socials">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" id="footerGitHub"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" id="footerLinkedIn"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- EmailJS SDK — required for contact form email delivery -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
