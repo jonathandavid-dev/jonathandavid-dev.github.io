@@ -1162,3 +1162,239 @@ body {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+<<<<<<< HEAD
+=======
+
+/* ── CERT CATEGORIES (Redesigned) ────────────────────────── */
+.cert-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.cert-category-card:hover {
+  border-color: rgba(124,58,237,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.cert-category-card.nptel {
+  border-color: rgba(6,182,212,0.12);
+}
+.cert-category-card.nptel:hover {
+  border-color: rgba(6,182,212,0.3);
+}
+
+.cert-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.cert-cat-icon-wrap {
+  font-size: 1.8rem;
+  width: 3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.cert-cat-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.cert-cat-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+.cert-cat-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  background: rgba(124,58,237,0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(124,58,237,0.3);
+  white-space: nowrap;
+}
+.cert-cat-count.nptel-count {
+  background: rgba(6,182,212,0.12);
+  color: var(--cyan);
+  border-color: rgba(6,182,212,0.3);
+}
+
+.cert-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 0.75rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.cert-item:hover {
+  background: rgba(124,58,237,0.07);
+  border-color: rgba(124,58,237,0.22);
+  transform: translateY(-2px);
+}
+
+.cert-item-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.cert-item-body {
+  flex: 1;
+  min-width: 0;
+}
+.cert-item-name {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+.cert-item-issuer {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.cert-hot-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.18rem 0.45rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+  color: #fff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .cert-items-grid { grid-template-columns: 1fr; }
+  .cert-category-card { padding: 1.25rem; }
+}
+
+/* ── SECTION SUBTITLE ─────────────────────────────────────── */
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ── SKILLS PRO (Redesigned) ──────────────────────────────── */
+.skills-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-pro-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.skill-pro-card:hover {
+  border-color: rgba(124,58,237,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.skill-pro-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+.skill-pro-icon { font-size: 1.3rem; flex-shrink: 0; }
+.skill-pro-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.skill-pro-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.skill-pro-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  transition: background var(--transition);
+}
+.skill-pro-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.skill-pro-name {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+/* Proficiency Badges */
+.skill-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge-advanced {
+  background: rgba(124,58,237,0.15);
+  color: var(--purple-light);
+  border: 1px solid rgba(124,58,237,0.3);
+}
+.badge-intermediate {
+  background: rgba(6,182,212,0.1);
+  color: var(--cyan);
+  border: 1px solid rgba(6,182,212,0.25);
+}
+.badge-familiar {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 1024px) {
+  .skills-pro-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .skills-pro-grid { grid-template-columns: 1fr; }
+}
+
+>>>>>>> ac72d1e (Redesign Skills section with professional AI Engineer layout and glassmorphism)
